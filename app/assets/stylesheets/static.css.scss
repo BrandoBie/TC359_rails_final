@@ -1,0 +1,35 @@
+// Place all the styles related to the static controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#nav {
+	display: inline;
+	margin: 0px 0px 0px 15px;
+	padding: 0px;
+	
+}
+
+.item {
+	display: inline;
+	color: white;
+	line-height: 50px;
+}
+.item a:visited {
+	text-decoration: none;
+	color: white;
+}
+
+#nav-container {
+	height: 50px;
+	background-color: black;
+}
+
+#time {
+	float: right;
+	margin-right: 15px;
+}
+#time p {
+	display: inline;
+	line-height: 50px;
+	color: white;
+}
