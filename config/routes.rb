@@ -1,6 +1,8 @@
 MyNewApp::Application.routes.draw do
+  resources :cats
+
   get "/about" => "static#about"
-  get "/cat-pictures(/:number_of_cats)" => "static#cats", as: :cat_pictures
+  get "/model" => "static#model"
   root "static#home"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
