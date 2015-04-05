@@ -2,8 +2,8 @@ MyNewApp::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :cats
 
-  get '/sign-in' => 'sessions#new'
-  delete '/sign-out' => 'sessions#destroy'
+  get "/sign-in", to: "sessions#new", as: "sign_in"
+  delete "/sign-out", to: "sessions#destroy", as: "sign_out"
   get "/about" => "static#about"
   get "/model" => "static#model"
   root "static#home"
