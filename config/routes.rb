@@ -1,4 +1,5 @@
 MyNewApp::Application.routes.draw do
+  resources :sessions, only: [:new, :create, :destroy]
   resources :cats
 
   get "/about" => "static#about"
