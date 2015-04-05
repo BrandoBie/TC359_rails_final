@@ -3,7 +3,7 @@ MyNewApp::Application.routes.draw do
   resources :cats
 
   get '/sign-in' => 'sessions#new'
-  get '/sign-out' => 'sessions#destroy'
+  delete '/sign-out' => 'sessions#destroy'
   get "/about" => "static#about"
   get "/model" => "static#model"
   root "static#home"
