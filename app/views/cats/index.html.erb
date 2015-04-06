@@ -23,8 +23,10 @@
         <td><%= cat.spade_neutered %></td>
         <td><%= cat.adopted %></td>
         <td><%= link_to 'Show', cat %></td>
-        <td><%= link_to 'Edit', edit_cat_path(cat) %></td>
-        <td><%= link_to 'Destroy', cat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if user_signed_in? %>
+          <td><%= link_to 'Edit', edit_cat_path(cat) %></td>
+          <td><%= link_to 'Destroy', cat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
