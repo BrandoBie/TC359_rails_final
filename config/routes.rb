@@ -1,4 +1,5 @@
 MyNewApp::Application.routes.draw do
+
   resources :sessions, only: [:new, :create, :destroy]
   resources :cats
 
@@ -7,6 +8,16 @@ MyNewApp::Application.routes.draw do
   get "/about" => "static#about"
   get "/model" => "static#model"
   root "static#home"
+  
+  get "/signup" => "users#new", as: "sign_up"
+  post "/users" => "users#create"
+  
+  
+  
+  
+  
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
