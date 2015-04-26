@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150405212249) do
+ActiveRecord::Schema.define(version: 20150426212444) do
 
   create_table "cats", force: true do |t|
     t.text     "name"
@@ -19,6 +19,13 @@ ActiveRecord::Schema.define(version: 20150405212249) do
     t.text     "breed"
     t.boolean  "spade_neutered"
     t.date     "adopted"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "posts", force: true do |t|
+    t.string   "title"
+    t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
