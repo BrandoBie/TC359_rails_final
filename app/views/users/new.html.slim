@@ -1,0 +1,19 @@
+h1 Signup!
+
+== form_for :user, url: '/users' do |f| 
+
+  | Email
+  br
+  == f.text_field :email
+  br
+  | Password
+  br
+  == f.password_field :password
+  br
+  | Password Confirmation
+  br
+  == f.password_field :password_confirmation
+  br
+  br
+  == f.submit "Submit"
+
