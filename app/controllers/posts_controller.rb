@@ -7,7 +7,12 @@ class PostsController < ApplicationController
     #@posts = Post.all
     
     ## perform a paginated query:
-    @posts = Post.paginate(:page => params[:page])
+    @posts1 = Post.paginate(:page => params[:page])
+    page = params[:page]
+    search = params[:search]
+    @posts = Post.search(search, page)
+    #@posts = Post.search(params[:search])
+
 
     # or, use an explicit "per page" limit:
     Post.paginate(:page => params[:page], :per_page => 5)
