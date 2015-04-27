@@ -4,7 +4,17 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    #@posts = Post.all
+    
+    ## perform a paginated query:
+    @posts = Post.paginate(:page => params[:page])
+
+    # or, use an explicit "per page" limit:
+    Post.paginate(:page => params[:page], :per_page => 5)
+
+    ## render page links in the view:
+    
+
   end
 
   # GET /posts/1

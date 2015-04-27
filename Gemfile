@@ -60,4 +60,5 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'cat_api', '~> 0.1.0'
 gem 'passenger'
 gem 'betterlorem', '~> 0.1.2'
+gem 'will_paginate', '~> 3.0.6'
 
