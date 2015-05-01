@@ -12,7 +12,9 @@ class PostsController < ApplicationController
     search = params[:search]
     
     #@posts = Post.search(search, page)
+    
     @posts = Post.search(params[:search]).paginate(page: params[:page], per_page: 10)
+    #@posts = Post.paginate(:page => params[:page], :per_page => 5)
     
     #@posts = Post.search(params[:search])
 
